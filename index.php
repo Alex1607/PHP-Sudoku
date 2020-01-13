@@ -289,9 +289,9 @@ $array = $puzzle->getPuzzle();
 echo ("╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗<br>");
 for ($i = 0; $i < 9; $i++) {
     for ($x = 0; $x < 9; $x++) {
-        if (in_array($x, array(0, 3, 6))) {
+        if (in_array($x, [0, 3, 6])) {
             echo ("║");
-        } else if (in_array($x, array(1, 2, 4, 5, 7, 8))) {
+        } else if (in_array($x, [1, 2, 4, 5, 7, 8])) {
             echo ("│");
         }
         $number = $array[$i][$x];
@@ -304,9 +304,9 @@ for ($i = 0; $i < 9; $i++) {
             echo ("║");
         }
     }
-    if (in_array($i, array(0, 1, 3, 4, 6, 7))) {
+    if (in_array($i, [0, 1, 3, 4, 6, 7])) {
         echo ("<br>╟───┼───┼───╢───┼───┼───╢───┼───┼───╢<br>");
-    } else if (in_array($i, array(2, 5))) {
+    } else if (in_array($i, [2, 5])) {
         echo ("<br>╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣<br>");
     } else {
         echo ("<br>");
